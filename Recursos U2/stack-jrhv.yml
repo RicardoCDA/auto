@@ -4,7 +4,7 @@ services:
     image: phpmyadmin
     restart: always
     ports:
-      - "9090:80" 
+      - 9090:80
     enviroment:
       - PMA_ARBITRARY=1
 mysql-db:
@@ -13,7 +13,7 @@ mysql-db:
   ports:
     - 3306:3306
   volumnes:
-    - ./dbfiles:docker-entrypoint-init.d
+    - ./dbfiles:docker-entrypoint-initdb.d
     - ./mysql_data:/var/lib/mysql
   enviroment:
     - MYSQL_ROOT_PASSWORD=qwerty
