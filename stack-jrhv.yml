@@ -1,0 +1,22 @@
+services:
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "9090:80" 
+    enviroment:
+      - PMA_ARBITRARY=1
+mysql-db:
+  container_name: mysql-db
+  image: mysql:8.0
+  ports:
+    - 3306:3306
+  volumnes:
+    - ./dbfiles:docker-entrypoint-init.d
+    - ./mysql_data:/var/lib/mysql
+  enviroment:
+    - MYSQL_ROOT_PASSWORD=qwerty
+    - MYSQL_DATABASE=sistemas_ventas_db
+    - MYSQL_USER=admin
+    - MYSQL_PASSWORD=admin
