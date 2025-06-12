@@ -30,3 +30,12 @@ services:
       - 8080:3000
     depends_on:
       - mysql-db
+  sistema-ventas-front:
+    build:
+      context: ./sistema-ventas-front
+      dockerfile: Dockerfile
+    container_name: sistema-ventas-front
+    ports:
+      - 80:80
+    depends_on:
+      - sistema-ventas-back
