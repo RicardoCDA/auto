@@ -32,7 +32,7 @@ services:
       - mysql-db
   sistema-ventas-front:
     build:
-      context: ./angular
+      context: ./sistema-ventas-front
       dockerfile: Dockerfile
     container_name: sistema-ventas-front
     ports:
