@@ -19,13 +19,13 @@ services:
       - ./mysql_data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=qwerty
-      - MYSQL_DATABASE=sistemas_ventas_db
+      - MYSQL_DATABASE=sistema_ventas_db
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=admin
   sistema-ventas-back:
     build:
       context: ./sistema-ventas-back
-    container_name: sistemas-ventas-back
+    container_name: sistema-ventas-back
     ports:
       - 8080:3000
     depends_on:
