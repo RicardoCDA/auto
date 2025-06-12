@@ -1,10 +1,11 @@
 FROM node:18.17.1-alpine
 
 VOLUME /usr/src/app
+WORKDIR /usr/src/app
 
-COPY package*.json .
+COPY package*.json ./
 
-RUN npm Install
+RUN npm install
 
 COPY . .
 
