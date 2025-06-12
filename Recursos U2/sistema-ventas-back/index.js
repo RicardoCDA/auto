@@ -21,7 +21,11 @@ class Server {
         // Mostrar las peticiones en la terminal (morgan)
         this.app.use((0, morgan_1.default)("dev"));
         // Configurar el intercambio de recursos de origen (cors)
-        this.app.use((0, cors_1.default)());
+        this.app.use(cors({
+            origin: 'http://192.168.1.247',
+            credentials: true,
+            methods: ['GET', 'POST', 'PUT', 'DELETE']
+            }));
         // Configurar la entrada de datos por medio de las peticiones (json)
         this.app.use(express_1.default.json());
         // Deshabilitar la opción de envio de URL corruptas
