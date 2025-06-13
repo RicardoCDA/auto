@@ -1,10 +1,10 @@
-# Instituto Tecnológico / Universidad  
+# Universidad Tecnológica del Norte de Guanajuato 
 **Carrera:** Ingeniería en Redes Inteligentes y Ciberseguridad  
 **Materia:** Automatización de Infraestructura Digital  
 **Unidad:** I  
 **Actividad:** Actividad 1 – Archivo README  
-**Estudiante:** Ricardo  
-**Fecha:** [Agrega la fecha aquí]  
+**Estudiante:** Jose Ricardo Hernandez Vazquez
+**Fecha:**   12/06/2025
 
 ---
 
